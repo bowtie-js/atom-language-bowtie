@@ -1,0 +1,50 @@
+!doctype("html")
+html {
+
+  $article -> ($title, $content) {
+    div.article {
+      h1: $title + "hello"
+      p: $content
+    }
+  }
+
+  head {
+    title: "example"
+    script(type="text/javascript") {
+      for (var i = 0; i < 10; i++) {
+        console.log("Example");
+      }
+    }
+    style {
+      body: {
+        background-color: #000;
+      }
+    }
+  }
+
+
+  body {
+    h1: "Test #{$apa[0]}"
+    p.someClass {
+      "Hello world"
+      a.link(href="#/foo"): "Click me"
+      "This should be the same block..."
+    }
+
+    div#content.middle.aligned.grid {
+      p: "A paragraph. $x is #{$x}"
+      a: "A link"
+      a: "another link"
+
+      for ($apa in 1..10) {
+        p: "#{$apa}-#{$apa}!=#{$test.foo[$apa]}"
+      }
+
+      for ($monkey in $apa) {
+        p: "Testing #{$monkey}!"
+      }
+
+    }
+
+  }
+}
