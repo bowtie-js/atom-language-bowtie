@@ -8,7 +8,11 @@
 ]
 'patterns': [
   {
-    'match': '^\\s*[!|a-zA-Z][^:\\s{};,]*'
+    'match': 'for'
+    'name': 'keyword.control.js'
+  },
+  {
+    'match': '^\\s*[!|a-zA-Z]\\w*(?=\\.|#|\\(|\\s|:|{)'
     'name': 'entity.name.tag.block.any.html'
   },
   {
@@ -16,8 +20,18 @@
     'name': 'string.quoted.double.js'
   },
   {
-    'match': '\\$[a-zA-Z][\\w|.|\\[|\\]]*\\s*[\\->|\\(]+'
-    'name': 'storage.type.function.js'
+    'match': '\\.\\w+'
+    'name': 'entity.other.attribute-name.html'
+  },
+  {
+    'match': '\\#\\w+'
+    'name': 'entity.other.attribute-name.id.html'
+  },
+  {
+    'match': '(\\$[a-zA-Z][\\w|.|\\[|\\]]*)\\s*[\\->|\\(]+'
+    'captures':
+      '1':
+        'name': 'storage.type.function.js'
   },
   {
     'match': '\\$[a-zA-Z][\\w|.|\\[|\\]]*'

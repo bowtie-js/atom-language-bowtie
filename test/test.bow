@@ -7,7 +7,7 @@ html {
       p: $content
     }
   }
-
+  $article($title, "Hello", 12)
   head {
     title: "example"
     script(type="text/javascript") {
