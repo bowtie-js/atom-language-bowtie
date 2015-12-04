@@ -8,8 +8,8 @@
 ]
 'patterns': [
   {
-    'match': 'for'
-    'name': 'keyword.control.js'
+    'match': '^\\s*\\/\\/.*'
+    'name': 'comment.line.double-slash.js'
   },
   {
     'match': '^\\s*[!|a-zA-Z]\\w*(?=\\.|#|\\(|\\s|:|{)'
