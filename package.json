@@ -1,12 +1,12 @@
 {
-  "name": "language-bowtie",
+  "name": "atom-language-bowtie",
   "version": "0.0.1",
   "description": "Language grammar for bowtie template engine",
   "keywords": [
     "language",
     "grammar"
   ],
-  "repository": "https://github.com/bowtie/language-bowtie",
+  "repository": "https://github.com/bowtie-js/atom-language-bowtie",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
