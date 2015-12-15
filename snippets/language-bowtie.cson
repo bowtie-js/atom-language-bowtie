@@ -292,7 +292,7 @@
     'body': 'samp: "$1"$0'
   'Script':
     'prefix': 'script'
-    'body': 'script(${1: type="${2:text/javascript}"}) {\n\t$3\n}'
+    'body': 'script(${1:type="${2:text/javascript}"}) {\n\t$3\n}'
   'Script With External Source':
     'prefix': 'scriptsrc'
     'body': 'script(src="$1" charset="${2:utf-8}")$0'

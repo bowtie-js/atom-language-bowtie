@@ -1,50 +1,44 @@
-!doctype("html")
-html {
+extend "templates/template.bow"
 
-  $article -> ($title, $content) {
-    div.article {
-      h1: $title + "hello"
-      p: $content
+$section -> ($title) {
+  div.col-lg-6 {
+    h4: $title
+    bowtie:content
+  }
+}
+
+div.jumbotron {
+  h1: "Greetings!"
+  p.lead: "Welcome to Bowtie!"
+  p {
+    a.btn.btn-lg.btn-success(href="#" role="button"): "Learn more..."
+  }
+}
+
+div.row.marketing {
+  $section("Lorem ipsum") {
+    p {
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "Aenean maximus tempus sodales. Duis ornare aliquam bibendum. "
+      "Ut viverra libero eu dui consectetur tincidunt. "
+      "Nam vel ex ut quam volutpat iaculis. Sed aliquet lacus sapien. "
+      "Curabitur faucibus massa vitae cursus suscipit. Vestibulum at "
+      "mauris accumsan nulla pharetra molestie. Cras pellentesque eu "
+      "sem in rhoncus. Duis sed interdum magna. In fringilla ullamcorper "
+      "magna nec tristique."
     }
   }
-  $article($title, "Hello", 12)
-  head {
-    title: "example"
-    script(type="text/javascript") {
-      for (var i = 0; i < 10; i++) {
-        console.log("Example");
-      }
+
+  $section("Lorem ipsum") {
+    p {
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      "Aenean maximus tempus sodales. Duis ornare aliquam bibendum. "
+      "Ut viverra libero eu dui consectetur tincidunt. "
+      "Nam vel ex ut quam volutpat iaculis. Sed aliquet lacus sapien. "
+      "Curabitur faucibus massa vitae cursus suscipit. Vestibulum at "
+      "mauris accumsan nulla pharetra molestie. Cras pellentesque eu "
+      "sem in rhoncus. Duis sed interdum magna. In fringilla ullamcorper "
+      "magna nec tristique."
     }
-    style {
-      body: {
-        background-color: #000;
-      }
-    }
-  }
-
-  // comment
-  body {
-    h1: "Test #{$apa[0]}"
-    p.someClass {
-      "Hello world"
-      a.link(href="#/foo"): "Click me"
-      "This should be the same block..."
-    }
-
-    div#content.middle.aligned.grid {
-      p: "A paragraph. $x is #{$x}"
-      a: "A link"
-      a: "another link"
-
-      for ($apa in 1..10) {
-        p: "#{$apa}-#{$apa}!=#{$test.foo[$apa]}"
-      }
-
-      for ($monkey in $apa) {
-        p: "Testing #{$monkey}!"
-      }
-
-    }
-
   }
 }
